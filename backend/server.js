@@ -10,9 +10,11 @@ app.use(express.json());
 
 // Routes import 
 const productsRouter = require('./routes/products');
+const salesRouter = require('./routes/sales');
 
 // Routes use 
 app.use('/api/products', productsRouter);
+app.use('/api/sales', salesRouter);
 
 // Health check endpoint
 app.get('/', (req, res) => {
